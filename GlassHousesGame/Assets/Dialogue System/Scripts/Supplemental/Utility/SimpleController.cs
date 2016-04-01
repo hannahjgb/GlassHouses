@@ -10,6 +10,8 @@ namespace PixelCrushers.DialogueSystem {
 	[AddComponentMenu("Dialogue System/Actor/Player/Simple Controller")]
 	[RequireComponent(typeof(CharacterController))]
 	public class SimpleController : MonoBehaviour {
+
+
 		
 		public AnimationClip idle;
 		public AnimationClip runForward;
@@ -48,6 +50,7 @@ namespace PixelCrushers.DialogueSystem {
 		}
 		
 		void Start() {
+			//Screen.showCursor = false;
 			originalCameraRotation = UnityEngine.Camera.main.transform.localRotation;
 			anim.AddClip((aim != null) ? aim : idle, "aim");
 			anim["aim"].layer = 1;

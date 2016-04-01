@@ -238,12 +238,18 @@ namespace PixelCrushers.DialogueSystem {
 		private Ray lastRay = new Ray();
 		private RaycastHit lastHit = new RaycastHit();
 		private RaycastHit[] lastHits = new RaycastHit[0];
+		public bool showCursor = true;
 		
 		/// <summary>
 		/// Runs a raycast to see what's under the selection point. Updates the selection and
 		/// calls the selection delegates if the selection has changed. If the player hits the
 		/// use button, sends an OnUse message to the selection.
 		/// </summary>
+
+		void Start(){
+			Cursor.visible = showCursor;
+		}
+
 		void Update() {
 			// Exit if disabled or paused:
 			if (!enabled || (Time.timeScale <= 0)) return;
