@@ -30,3 +30,6 @@ sysinfo.txt
 *.unitypackage
 
 # © 2016 GitHub, Inc. Terms Privacy Security
+*.mp3
+
+*.unity3d
